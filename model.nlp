@@ -1,0 +1,696 @@
+{
+  "settings": {
+    "languages": [
+      "en"
+    ],
+    "tag": "nlp",
+    "threshold": 0.5,
+    "autoLoad": true,
+    "autoSave": true,
+    "modelFileName": "model.nlp",
+    "calculateSentiment": true
+  },
+  "nluManager": {
+    "settings": {
+      "tag": "nlu-manager"
+    },
+    "locales": [
+      "en"
+    ],
+    "languageNames": {},
+    "domainManagers": {
+      "en": {
+        "settings": {
+          "locale": "en",
+          "trainByDomain": false,
+          "tag": "domain-manager-en",
+          "nluByDomain": {
+            "default": {
+              "className": "NeuralNlu",
+              "settings": {}
+            }
+          },
+          "useStemDict": true
+        },
+        "stemDict": {
+          "goodby": {
+            "intent": "greetings.bye",
+            "domain": "default"
+          },
+          "bye,care,take": {
+            "intent": "greetings.bye",
+            "domain": "default"
+          },
+          "later,see,you": {
+            "intent": "greetings.bye",
+            "domain": "default"
+          },
+          "bye,for,now": {
+            "intent": "greetings.bye",
+            "domain": "default"
+          },
+          "go,i,must": {
+            "intent": "greetings.bye",
+            "domain": "default"
+          },
+          "hello": {
+            "intent": "greetings.hello",
+            "domain": "default"
+          },
+          "hi": {
+            "intent": "greetings.hello",
+            "domain": "default"
+          },
+          "howdi": {
+            "intent": "greetings.hello",
+            "domain": "default"
+          },
+          "greet": {
+            "intent": "greetings.hello",
+            "domain": "default"
+          },
+          "hey": {
+            "intent": "greetings.hello",
+            "domain": "default"
+          },
+          "are,do,how,you": {
+            "intent": "greetings.hello2",
+            "domain": "default"
+          },
+          "been,have,how,you": {
+            "intent": "greetings.hello2",
+            "domain": "default"
+          },
+          "everyth,how,is": {
+            "intent": "greetings.hello2",
+            "domain": "default"
+          },
+          "go,how,is,it": {
+            "intent": "greetings.hello2",
+            "domain": "default"
+          },
+          "are,go,how,thing": {
+            "intent": "greetings.hello2",
+            "domain": "default"
+          },
+          "go,is,on,what": {
+            "intent": "greetings.hello2",
+            "domain": "default"
+          },
+          "is,new,what": {
+            "intent": "greetings.hello2",
+            "domain": "default"
+          },
+          "is,up,what": {
+            "intent": "greetings.hello2",
+            "domain": "default"
+          }
+        },
+        "intentDict": {
+          "greetings.bye": "default",
+          "greetings.hello": "default",
+          "greetings.hello2": "default"
+        },
+        "sentences": [
+          {
+            "domain": "default",
+            "utterance": "goodbye",
+            "intent": "greetings.bye"
+          },
+          {
+            "domain": "default",
+            "utterance": "bye take care",
+            "intent": "greetings.bye"
+          },
+          {
+            "domain": "default",
+            "utterance": "see you later",
+            "intent": "greetings.bye"
+          },
+          {
+            "domain": "default",
+            "utterance": "bye for now",
+            "intent": "greetings.bye"
+          },
+          {
+            "domain": "default",
+            "utterance": "i must go",
+            "intent": "greetings.bye"
+          },
+          {
+            "domain": "default",
+            "utterance": "hello",
+            "intent": "greetings.hello"
+          },
+          {
+            "domain": "default",
+            "utterance": "hi",
+            "intent": "greetings.hello"
+          },
+          {
+            "domain": "default",
+            "utterance": "howdy",
+            "intent": "greetings.hello"
+          },
+          {
+            "domain": "default",
+            "utterance": "Greetings",
+            "intent": "greetings.hello"
+          },
+          {
+            "domain": "default",
+            "utterance": "hey",
+            "intent": "greetings.hello"
+          },
+          {
+            "domain": "default",
+            "utterance": "How are you doing?",
+            "intent": "greetings.hello2"
+          },
+          {
+            "domain": "default",
+            "utterance": "How have you been?",
+            "intent": "greetings.hello2"
+          },
+          {
+            "domain": "default",
+            "utterance": "How's everything?",
+            "intent": "greetings.hello2"
+          },
+          {
+            "domain": "default",
+            "utterance": "How's it going?",
+            "intent": "greetings.hello2"
+          },
+          {
+            "domain": "default",
+            "utterance": "How are things going?",
+            "intent": "greetings.hello2"
+          },
+          {
+            "domain": "default",
+            "utterance": "What's going on?",
+            "intent": "greetings.hello2"
+          },
+          {
+            "domain": "default",
+            "utterance": "What's new?",
+            "intent": "greetings.hello2"
+          },
+          {
+            "domain": "default",
+            "utterance": "What's up?",
+            "intent": "greetings.hello2"
+          }
+        ],
+        "domains": {
+          "master_domain": {
+            "settings": {
+              "locale": "en",
+              "tag": "nlu-en",
+              "keepStopwords": true,
+              "nonefeatureValue": 1,
+              "nonedeltaMultiplier": 1.2,
+              "spellCheck": false,
+              "spellCheckDistance": 1,
+              "filterZeros": true,
+              "log": true
+            },
+            "features": {
+              "goodby": 1,
+              "bye": 1,
+              "take": 1,
+              "care": 1,
+              "see": 1,
+              "you": 1,
+              "later": 1,
+              "for": 1,
+              "now": 1,
+              "i": 1,
+              "must": 1,
+              "go": 1,
+              "hello": 1,
+              "hi": 1,
+              "howdi": 1,
+              "greet": 1,
+              "hey": 1,
+              "how": 1,
+              "are": 1,
+              "do": 1,
+              "have": 1,
+              "been": 1,
+              "is": 1,
+              "everyth": 1,
+              "it": 1,
+              "thing": 1,
+              "what": 1,
+              "on": 1,
+              "new": 1,
+              "up": 1
+            },
+            "intents": {
+              "greetings.bye": 1,
+              "greetings.hello": 1,
+              "greetings.hello2": 1
+            },
+            "intentFeatures": {
+              "greetings.bye": {
+                "goodby": 1,
+                "bye": 1,
+                "take": 1,
+                "care": 1,
+                "see": 1,
+                "you": 1,
+                "later": 1,
+                "for": 1,
+                "now": 1,
+                "i": 1,
+                "must": 1,
+                "go": 1
+              },
+              "greetings.hello": {
+                "hello": 1,
+                "hi": 1,
+                "howdi": 1,
+                "greet": 1,
+                "hey": 1
+              },
+              "greetings.hello2": {
+                "how": 1,
+                "are": 1,
+                "you": 1,
+                "do": 1,
+                "have": 1,
+                "been": 1,
+                "is": 1,
+                "everyth": 1,
+                "it": 1,
+                "go": 1,
+                "thing": 1,
+                "what": 1,
+                "on": 1,
+                "new": 1,
+                "up": 1
+              }
+            },
+            "featuresToIntent": {
+              "goodby": [
+                "greetings.bye"
+              ],
+              "bye": [
+                "greetings.bye"
+              ],
+              "take": [
+                "greetings.bye"
+              ],
+              "care": [
+                "greetings.bye"
+              ],
+              "see": [
+                "greetings.bye"
+              ],
+              "you": [
+                "greetings.bye",
+                "greetings.hello2"
+              ],
+              "later": [
+                "greetings.bye"
+              ],
+              "for": [
+                "greetings.bye"
+              ],
+              "now": [
+                "greetings.bye"
+              ],
+              "i": [
+                "greetings.bye"
+              ],
+              "must": [
+                "greetings.bye"
+              ],
+              "go": [
+                "greetings.bye",
+                "greetings.hello2"
+              ],
+              "hello": [
+                "greetings.hello"
+              ],
+              "hi": [
+                "greetings.hello"
+              ],
+              "howdi": [
+                "greetings.hello"
+              ],
+              "greet": [
+                "greetings.hello"
+              ],
+              "hey": [
+                "greetings.hello"
+              ],
+              "how": [
+                "greetings.hello2"
+              ],
+              "are": [
+                "greetings.hello2"
+              ],
+              "do": [
+                "greetings.hello2"
+              ],
+              "have": [
+                "greetings.hello2"
+              ],
+              "been": [
+                "greetings.hello2"
+              ],
+              "is": [
+                "greetings.hello2"
+              ],
+              "everyth": [
+                "greetings.hello2"
+              ],
+              "it": [
+                "greetings.hello2"
+              ],
+              "thing": [
+                "greetings.hello2"
+              ],
+              "what": [
+                "greetings.hello2"
+              ],
+              "on": [
+                "greetings.hello2"
+              ],
+              "new": [
+                "greetings.hello2"
+              ],
+              "up": [
+                "greetings.hello2"
+              ]
+            },
+            "neuralNetwork": {
+              "settings": {
+                "locale": "en",
+                "tag": "nlu-en",
+                "keepStopwords": true,
+                "nonefeatureValue": 1,
+                "nonedeltaMultiplier": 1.2,
+                "spellCheck": false,
+                "spellCheckDistance": 1,
+                "filterZeros": true,
+                "log": true
+              },
+              "features": [
+                "goodby",
+                "bye",
+                "take",
+                "care",
+                "see",
+                "you",
+                "later",
+                "for",
+                "now",
+                "i",
+                "must",
+                "go",
+                "hello",
+                "hi",
+                "howdi",
+                "greet",
+                "hey",
+                "how",
+                "are",
+                "do",
+                "have",
+                "been",
+                "is",
+                "everyth",
+                "it",
+                "thing",
+                "what",
+                "on",
+                "new",
+                "up"
+              ],
+              "intents": [
+                "greetings.bye",
+                "greetings.hello",
+                "greetings.hello2"
+              ],
+              "perceptrons": [
+                [
+                  10.879074096679688,
+                  5.637296676635742,
+                  2.818936347961426,
+                  2.818936347961426,
+                  4.417931079864502,
+                  2.4353814125061035,
+                  4.417931079864502,
+                  2.818066120147705,
+                  2.818066120147705,
+                  4.515904426574707,
+                  4.515904426574707,
+                  2.2368035316467285,
+                  -2.9536571502685547,
+                  -2.939059019088745,
+                  -2.923827886581421,
+                  -2.9079837799072266,
+                  -2.8915467262268066,
+                  -3.180391550064087,
+                  -1.4533933401107788,
+                  -0.8389067649841309,
+                  -1.122128963470459,
+                  -1.122128963470459,
+                  -2.277433156967163,
+                  -0.12507104873657227,
+                  -0.37681475281715393,
+                  -0.5926881432533264,
+                  -1.6729352474212646,
+                  -1.2746973037719727,
+                  -0.19475878775119781,
+                  -0.1418735533952713,
+                  2.991503379077329
+                ],
+                [
+                  -6.881211280822754,
+                  -3.6380772590637207,
+                  -1.8197287321090698,
+                  -1.8197287321090698,
+                  -1.9735817909240723,
+                  -3.3268959522247314,
+                  -1.9735817909240723,
+                  -1.8178961277008057,
+                  -1.8178961277008057,
+                  -2.043351411819458,
+                  -2.043351411819458,
+                  -3.186443567276001,
+                  6.93313455581665,
+                  6.952919960021973,
+                  6.927641868591309,
+                  6.900797367095947,
+                  6.872424125671387,
+                  -2.86423921585083,
+                  -1.092533826828003,
+                  -0.6129403114318848,
+                  -0.6896874904632568,
+                  -0.6896874904632568,
+                  -3.649073839187622,
+                  -0.7917176485061646,
+                  -0.2088976353406906,
+                  -0.4412507116794586,
+                  -2.591264247894287,
+                  -0.38551971316337585,
+                  -1.1052285432815552,
+                  -1.0601208209991455,
+                  7.296705409306026
+                ],
+                [
+                  -1.0313392877578735,
+                  -1.0243300199508667,
+                  -0.5046045780181885,
+                  -0.5046045780181885,
+                  -1.5932624340057373,
+                  2.109210252761841,
+                  -1.5932624340057373,
+                  -0.4224831163883209,
+                  -0.4224831163883209,
+                  -1.356564998626709,
+                  -1.356564998626709,
+                  1.2893495559692383,
+                  -0.9560098052024841,
+                  -0.9480891823768616,
+                  -0.9437862038612366,
+                  -0.9408650398254395,
+                  -0.9377182126045227,
+                  6.4728617668151855,
+                  3.446425199508667,
+                  1.3316439390182495,
+                  2.377769708633423,
+                  2.377769708633423,
+                  5.904315948486328,
+                  0.9684537053108215,
+                  -0.31969398260116577,
+                  2.1152257919311523,
+                  5.256123065948486,
+                  0.9114999771118164,
+                  2.1825852394104004,
+                  2.1626203060150146,
+                  0.9436812555886763
+                ]
+              ]
+            }
+          }
+        }
+      }
+    },
+    "intentDomains": {},
+    "extraSentences": [
+      [
+        "en",
+        "goodbye"
+      ],
+      [
+        "en",
+        "bye take care"
+      ],
+      [
+        "en",
+        "see you later"
+      ],
+      [
+        "en",
+        "bye for now"
+      ],
+      [
+        "en",
+        "i must go"
+      ],
+      [
+        "en",
+        "hello"
+      ],
+      [
+        "en",
+        "hi"
+      ],
+      [
+        "en",
+        "howdy"
+      ],
+      [
+        "en",
+        "Greetings"
+      ],
+      [
+        "en",
+        "hey"
+      ],
+      [
+        "en",
+        "How are you doing?"
+      ],
+      [
+        "en",
+        "How have you been?"
+      ],
+      [
+        "en",
+        "How's everything?"
+      ],
+      [
+        "en",
+        "How's it going?"
+      ],
+      [
+        "en",
+        "How are things going?"
+      ],
+      [
+        "en",
+        "What's going on?"
+      ],
+      [
+        "en",
+        "What's new?"
+      ],
+      [
+        "en",
+        "What's up?"
+      ]
+    ]
+  },
+  "ner": {
+    "settings": {
+      "tag": "ner",
+      "entityPreffix": "%",
+      "entitySuffix": "%"
+    },
+    "rules": {}
+  },
+  "nlgManager": {
+    "settings": {
+      "tag": "nlg-manager"
+    },
+    "responses": {
+      "en": {
+        "greetings.bye": [
+          {
+            "answer": "see you soon!"
+          },
+          {
+            "answer": "Till next time"
+          },
+          {
+            "answer": "bye bye"
+          },
+          {
+            "answer": "have a great day"
+          }
+        ],
+        "greetings.hello": [
+          {
+            "answer": "Hey there!"
+          },
+          {
+            "answer": "Hello"
+          },
+          {
+            "answer": "Hi"
+          },
+          {
+            "answer": "Greetings"
+          }
+        ],
+        "greetings.hello2": [
+          {
+            "answer": "I'm good."
+          },
+          {
+            "answer": "I'm doing well."
+          },
+          {
+            "answer": "I'm okay"
+          },
+          {
+            "answer": "I'm alright."
+          },
+          {
+            "answer": "Doing Really Well!"
+          },
+          {
+            "answer": "Couldn't Be Better!"
+          },
+          {
+            "answer": "Feel Great!"
+          }
+        ]
+      }
+    }
+  },
+  "actionManager": {
+    "settings": {
+      "tag": "action-manager"
+    },
+    "actions": {}
+  },
+  "slotManager": {}
+}

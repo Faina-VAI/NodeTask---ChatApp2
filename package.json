@@ -1,0 +1,14 @@
+{
+  "name": "chatbot_nodejs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "train": "node train.js",
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "node-nlp": "^4.22.1"
+  },
+  "homepage": "",
+  "description": ""
+}
